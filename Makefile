@@ -1,7 +1,7 @@
 stow:
-	stow -t ../..
+	stow . -t ../../
 
 unstow:
-	stow -D -t ../..
+	stow -D . -t ../../
 
 restow: unstow stow

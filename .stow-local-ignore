@@ -1,0 +1,39 @@
+# https://www.gnu.org/software/stow/manual/stow.html
+# https://www.gnu.org/software/stow/manual/html_node/Types-And-Syntax-Of-Ignore-Lists.html
+
+RCS
+.+,v
+
+CVS
+\.\#.+       # CVS conflict files / emacs lock files
+\.cvsignore
+
+\.svn
+_darcs
+\.hg
+
+\.git
+\.gitignore
+\.gitmodules
+
+.+~          # emacs backup files
+\#.*\#       # emacs autosave files
+
+# directory containing more customized configs
+^\.github
+^/custom
+^/docs
+
+^/.*\.md
+\.md
+
+^/.config/.*md
+
+(^|/)install$
+(^|/)LICENSE$
+(^|/)README*$
+
+^/COPYING
+^/Brewfile
+^/LICENSE
+^/Makefile
