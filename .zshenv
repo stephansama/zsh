@@ -6,6 +6,8 @@ export FZF_DEFAULT_OPTS='--tmux center --preview-window="down"'
 # https://github.com/antfu-collective/ni?tab=readme-ov-file#config
 export NI_GLOBAL_AGENT="pnpm"
 
+export THEME="starship"
+
 export BOOKMARKS="$DOTFILES/custom/bookmarks/"
 export CODE="$HOME/Code"
 export DOTFILES="$HOME/.dotfiles/"

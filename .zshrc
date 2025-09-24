@@ -48,13 +48,13 @@ fi
 
 source "$HOME/.config/scripts/completions/setup.sh"
 
-if [ -n "$USE_P10K" ]; then
+if [ -n "$USE_P10K" ] && [[ "$THEME" == "powerlevel10k" ]]; then
 	source "$HOME/.config/scripts/util/p10k.sh"
-else
-	# https://starship.rs/guide/#step-2-set-up-your-shell-to-use-starship
-	if type starship &>/dev/null; then
-		export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
+fi
 
-		eval "$(starship init zsh)"
-	fi
+# https://starship.rs/guide/#step-2-set-up-your-shell-to-use-starship
+if type starship &>/dev/null && [[ "$THEME" == "starship" ]]; then
+	export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
+
+	eval "$(starship init zsh)"
 fi
