@@ -17,7 +17,7 @@ alias \
 	gd="cd $DOTFILES" \
 	gdo="find . -type f -name \"*.orig\" -delete" \
 	gsm=". fzf-submodule.sh" \
-	gsmi=". $DOTFILES/submodule.sh" \
+	gsmi=". $SCRIPTS/git-submodule.sh" \
 	gu=". git-toplevel.sh" \
 	lg="launch-lazygit.sh" \
 	ls="lsd" \
