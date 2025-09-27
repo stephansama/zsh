@@ -12,6 +12,7 @@ alias \
 	c="clear" \
 	cp="cp -iv" \
 	dst="find . -type f -name \".DS_Store\" -delete" \
+	fs=". ffmpeg-studio" \
 	fp=". fzf-projects.sh" \
 	fpj=". fzf-pkgjson.sh" \
 	gd="cd $DOTFILES" \
@@ -24,7 +25,8 @@ alias \
 	mv="mv -iv" \
 	ov="vim" \
 	restow="stow -D . && stow ." \
-	vc="code ."
+	vc="code ." \
+	ytmp3="yt-dlp -x --audio-format mp3"
 
 # https://yazi-rs.github.io/docs/quick-start#shell-wrapper
 if type yazi &>/dev/null; then
@@ -45,6 +47,8 @@ if type nvim &>/dev/null; then
 		cd "$(cat ~/.nvim_cwd 2>/dev/null || pwd)"
 	}
 fi
+
+eval "$(atuin init zsh)"
 
 source "$HOME/.config/scripts/completions/setup.sh"
 
