@@ -12,6 +12,7 @@ export BOOKMARKS="$DOTFILES/custom/bookmarks/"
 export CODE="$HOME/Code"
 export DOTFILES="$HOME/.dotfiles/"
 export GOPATH="$HOME/go"
+export MOVIES="$HOME/Movies"
 export SCRIPTS="$HOME/.config/scripts/"
 
 export PATH="$PATH"

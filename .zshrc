@@ -13,7 +13,8 @@ alias \
 	cp="cp -iv" \
 	dst="find . -type f -name \".DS_Store\" -delete" \
 	fs=". ffmpeg-studio" \
-	fp=". fzf-projects.sh" \
+	fm=". fzf-dir.sh $MOVIES" \
+	fp=". fzf-dir.sh $CODE" \
 	fpj=". fzf-pkgjson.sh" \
 	gd="cd $DOTFILES" \
 	gdo="find . -type f -name \"*.orig\" -delete" \
