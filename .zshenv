@@ -1,6 +1,8 @@
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+export GPG_TTY=$(tty)
+
 export FZF_DEFAULT_OPTS='--tmux center --preview-window="down"'
 
 # https://github.com/antfu-collective/ni?tab=readme-ov-file#config
