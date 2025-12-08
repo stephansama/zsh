@@ -63,3 +63,18 @@ if type starship &>/dev/null && [[ "$THEME" == "starship" ]]; then
 
 	eval "$(starship init zsh)"
 fi
+
+function add_repo_bin() {
+	local ROOT_DIR BIN_DIRS
+
+	# Get repo root (fails silently if not in a repo)
+	ROOT_DIR=$(git rev-parse --show-toplevel 2>/dev/null) || return
+
+	# Collect all .bin directories, safely joined with :
+	BIN_DIRS=$(find "$ROOT_DIR" -type d -name '.bin' -print | paste -sd : -)
+
+	# Only add if non-empty AND not already in PATH
+	if [[ -n $BIN_DIRS && ":$PATH:" != *":$BIN_DIRS:"* ]]; then
+		export PATH="$PATH:$BIN_DIRS"
+	fi
+}
