@@ -49,8 +49,6 @@ if type nvim &>/dev/null; then
 	}
 fi
 
-eval "$(atuin init zsh)"
-
 source "$HOME/.config/scripts/completions/setup.sh"
 
 if [ -n "$USE_P10K" ] && [[ "$THEME" == "powerlevel10k" ]]; then
@@ -63,6 +61,8 @@ if type starship &>/dev/null && [[ "$THEME" == "starship" ]]; then
 
 	eval "$(starship init zsh)"
 fi
+
+eval "$(atuin init zsh)"
 
 function add_repo_bin() {
 	local ROOT_DIR BIN_DIRS
