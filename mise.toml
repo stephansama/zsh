@@ -1,0 +1,17 @@
+[env]
+ZSH_TARGET = "../../"
+
+[tasks.stow]
+run = """
+stow . -t $ZSH_TARGET
+"""
+
+[tasks.unstow]
+run = """
+stow -D . -t $ZSH_TARGET
+"""
+
+[tasks.setup]
+run = """
+mise run stow
+"""
